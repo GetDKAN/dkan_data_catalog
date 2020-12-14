@@ -1,0 +1,14 @@
+name: DKAN Data Catalog Theme
+type: theme
+description: A DKAN theme sub theme of Classy
+core_version_requirement: ^8 || ^9
+base theme: classy
+libraries:
+  - data_catalog_theme/global-styling
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
