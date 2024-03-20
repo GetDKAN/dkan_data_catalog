@@ -1,0 +1,16 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/base.css: {}
+      css/base/variables.css: {}
+      css/base/media-queries.css: {}
+    layout:
+      css/layout/footer.css: {}
+      css/layout/page.css: {}
+
+dataset-page:
+  version: VERSION
+  css:
+    base:
+      css/content/node--data.css: {}

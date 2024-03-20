@@ -42,6 +42,7 @@
  * @see html.html.twig
  */
 #}
+
 <div class="layout-container">
 
   <header role="banner">
@@ -61,9 +62,7 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      <div class="dc-page container">
-        {{ page.content }}
-      </div>
+      {{ page.content }}
     </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}
@@ -81,7 +80,7 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo" class="dc-footer">
+    <footer role="contentinfo" {{ attributes.addClass('dkan-catalog-footer') }}>
       {{ page.footer }}
     </footer>
   {% endif %}

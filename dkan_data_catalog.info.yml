@@ -1,0 +1,7 @@
+name: DKAN Catalog Theme
+type: theme
+description: 'A DKAN theme based on Stark'
+core_version_requirement: ^9.4 || ^10
+base theme: stark
+libraries:
+  - dkan_catalog/global-styling
