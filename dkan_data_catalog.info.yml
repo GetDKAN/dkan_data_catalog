@@ -1,4 +1,4 @@
-name: DKAN Catalog Theme
+name: DKAN Data Catalog Theme
 type: theme
 description: 'A DKAN theme based on Stark'
 core_version_requirement: ^9.4 || ^10
