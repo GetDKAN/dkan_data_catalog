@@ -8,9 +8,19 @@ global-styling:
     layout:
       css/layout/footer.css: {}
       css/layout/page.css: {}
-
+tailwind:
+  version: VERSION
+  css:
+    base:
+      css/tailwind/tailwind.css: {}
 dataset-page:
   version: VERSION
   css:
     base:
       css/content/node--data.css: {}
+
+dataset-search:
+  version: VERSION
+  css:
+    theme:
+      css/content/views--dataset-search.css: {}

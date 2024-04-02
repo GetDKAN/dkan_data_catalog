@@ -1,8 +1,8 @@
-<div{{ attributes.addClass('container') }}>
+<div{{ attributes.addClass(['container', 'mx-auto']) }}>
   <div class="dkan-dataset-description">
     {{ metadata.description }}
   </div>
-  <div class="dkan-data-previews">
+  <div class="overflow-x-scroll">
     {% for dist in metadata.distribution %}
       <div class="dkan-data-preview">
         {{ include('dkan_catalog_sdc:distribution_download', {
@@ -20,7 +20,7 @@
   </div>
 
   <div class="dkan-metadata">
-    <h2 class="sub-title">About this dataset</h2>
+    <h2 class='text-sky-900 my-2 font-bold text-2xl'>About this dataset</h2>
     {{ include('dkan_catalog_sdc:metadata_table', {
     table_rows: {
         "Modified": metadata.modified|date("F j, Y"),

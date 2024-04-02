@@ -10,5 +10,10 @@ use Drupal\Core\Site\Settings;
 function dkan_data_catalog_preprocess_node__data(&$variables) {
   $json = $variables['node']->get('field_json_metadata')->value;
   $variables['metadata'] =  json_decode($json);
-  $variables['#attached']['library'][] = 'dkan_catalog/dataset-page';
+  $variables['#attached']['library'][] = 'dkan_data_catalog/dataset-page';
+}
+
+
+function dkan_data_catalog_preprocess_views_view__dataset_search(&$variables) {
+  $variables['#attached']['library'][] = 'dkan_data_catalog/dataset-search';
 }

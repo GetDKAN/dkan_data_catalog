@@ -1,5 +1,10 @@
-body {
+/* body {
   margin: 0;
+  background-color: #f9fafb;
+  background-image: none;
+  color: #3b3b3b;
+  font-family: Rubik Regular, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  
 }
 
 .container {
@@ -19,4 +24,4 @@ body {
 .sub-title {
   font-size: var(--sub-title-font-size);
   color: var(--sub-title-text-color)
-}
+} */
