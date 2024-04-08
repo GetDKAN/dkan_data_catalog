@@ -1,28 +1,17 @@
 {
-  "name": "data_catalog_theme",
+  "name": "dkan_data_catalog",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Drupal DKAN theme using tailwindcss.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cli": "^2.3.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-livereload": "^4.0.2",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "imagemin-pngquant": "^9.0.1"
-  },
-  "dependencies": {
-    "@civicactions/data-catalog-components": "^1.4.1",
-    "bootstrap": "^4.5.3"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.3"
   }
 }

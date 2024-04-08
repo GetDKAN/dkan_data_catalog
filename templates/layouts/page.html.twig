@@ -42,7 +42,8 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+
+<div class="">
 
   <header role="banner">
     {{ page.header }}
@@ -57,23 +58,29 @@
 
   {{ page.help }}
 
-  <main role="main">
+  <main role='main' class='mb-12'>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <div class="dc-hero">
-      <div class="dc-hero-block center">
-        <h2 class="dc-hero-title">Welcome to DKAN</h2>
-        <p>DKAN is an open-source data management platform. It treats data as content so that you can easily publish, manage, and maintain your open data no matter the size of your team or the level of technical expertise.</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="dc-icon-list container">
-        <h2 class="pane-title">Dataset Topics</h2>
-      </div>
-    </div>
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo" class="dc-footer">
+    <footer role="contentinfo" {{ attributes.addClass('bg-sky-950 py-10') }}>
       {{ page.footer }}
     </footer>
   {% endif %}

@@ -42,7 +42,8 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+
+<div class="">
 
   <header role="banner">
     {{ page.header }}
@@ -57,31 +58,20 @@
 
   {{ page.help }}
 
-  <main role="main">
+  <main role='main' class='mb-12'>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      <div class="dc-page container">
-        {{ page.content }}
+    <div class='bg-gradient-to-b from-sky-950 to-sky-800 py-10'>
+      <div class="container mx-auto text-center w-6/12 text-white">
+        <h2 class="text-2xl">{{ node.label }}</h2>
+        <p>{{ node.body.value }}</p>
       </div>
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+    </div>
 
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo" class="dc-footer">
+    <footer role="contentinfo" {{ attributes.addClass('bg-sky-950 py-10') }}>
       {{ page.footer }}
     </footer>
   {% endif %}

@@ -1,0 +1,44 @@
+<div{{ attributes.addClass(['container', 'mx-auto']) }}>
+  <div class="dkan-dataset-description">
+    {{ metadata.description }}
+  </div>
+  <div class="overflow-x-scroll">
+    {% for dist in metadata.distribution %}
+      <div class="dkan-data-preview">
+        {{ include('dkan_catalog_sdc:distribution_download', {
+          downloadURL: dist.downloadURL,
+          title: dist.title,
+          mediaType: dist.mediaType,
+          format: dist.format
+        }, with_context = false) }}
+        {{ include('dkan_catalog_sdc:data_preview', {
+          dataset_id: metadata.identifier,
+          distribution_index: loop.index0,
+        }, with_context = false) }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="dkan-metadata">
+    <h2 class='text-sky-900 my-2 font-bold text-2xl'>About this dataset</h2>
+    {{ include('dkan_catalog_sdc:metadata_table', {
+    table_rows: {
+        "Modified": metadata.modified|date("F j, Y"),
+        "Issued": metadata.issued|date("F j, Y"),
+        "Frequency": metadata.accrualPeriodicity,
+        "Publisher": metadata.publisher.name,
+        "Identifier": metadata.identifier,
+        "Contact": metadata.contactPoint.fn,
+        "Contact Email": metadata.contactPoint.hasEmail,
+        "Bureau Code": metadata.bureauCode[0],
+        "Program Code": metadata.programCode[0],
+        "Category": metadata.theme|join(', '),
+        "Tags": metadata.keyword|join(', '),
+        "License": metadata.license,
+        "Spatial": metadata.spatial,
+        "Public Access Level": metadata.accessLevel,
+      }
+    }, with_context = false) }}
+  </div>
+
+</div>
