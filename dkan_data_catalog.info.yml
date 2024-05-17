@@ -2,7 +2,7 @@ name: DKAN Data Catalog Theme
 type: theme
 description: 'A DKAN theme based on Stark'
 core_version_requirement: ^9.4 || ^10
-base theme: stark
+base theme: false
 libraries:
   - dkan_data_catalog/tailwind
   - dkan_data_catalog/global-styling

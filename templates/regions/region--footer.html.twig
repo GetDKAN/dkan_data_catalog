@@ -18,10 +18,44 @@
     'region-' ~ region|clean_class,
     'container',
     'mx-auto',
+    'flex',
   ]
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {{ content }}
+    <div class="w-6/12 grow text-white">
+      <h2 class="font-bold text-2xl">
+        Open Source Open Data
+      </h2>
+      <p>
+        We can only realize the full power of open data when the tools used for its collection, publishing and analysis are also open and transparent.
+      </p>
+      <span>
+        Powered by <a href="https://github.com/getdkan">DKAN</a>
+    </div>
+    <div class="">
+      <nav>
+        <ul class="grid grid-cols-2">
+          <li>
+            <a href="https://dkan.readthedocs.io/en/latest/index.html">Documentation</a>
+          </li>
+          <li>
+            <a href="https://github.com/getdkan/dkan">Download</a>
+          </li>
+          <li>
+            <a href="https://civicactions.com/">CivicActions</a>
+          </li>
+          <li>
+            <a href="https://project-open-data.cio.gov/">Project Open Data</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>
+          </li>
+          <li>
+            <a href="https://drupal.org/">Drupal</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 {% endif %}
